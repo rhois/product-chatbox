@@ -1,0 +1,36 @@
+.container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .backButton {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #0070f3;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  
+  .backButton:hover {
+    text-decoration: underline;
+  }
+  
+  .card {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  .card h1 {
+    margin: 0 0 10px 0;
+    font-size: 2rem;
+  }
+  
+  .card p {
+    margin: 10px 0;
+  }
+  

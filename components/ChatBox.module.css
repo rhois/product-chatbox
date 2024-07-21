@@ -1,0 +1,69 @@
+.icon {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    background: #0070f3;
+    border: none;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .chatIcon {
+    width: 24px;
+    height: 24px;
+    color: white;
+  }
+  
+  .chatbox {
+    position: fixed;
+    bottom: 80px;
+    right: 16px;
+    width: 300px;
+    max-height: 400px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .messages {
+    flex: 1;
+    padding: 16px;
+    overflow-y: auto;
+  }
+  
+  .boxmessage{
+    overflow: hidden;
+    margin-bottom: 8px;
+  }
+  .message {
+    padding: 8px;
+    background: #1459ee;
+    border-radius: 4px;
+    float: right;
+    max-width: 80%;
+    color: #fff;
+  }
+  
+  .input {
+    border: none;
+    border-top: 1px solid #ddd;
+    padding: 8px;
+    border-radius: 0 0 8px 8px;
+  }
+  
+  .reply {
+    border-radius: 4px;
+    float: left;
+    max-width: 80%;
+    padding: 8px;
+    background: #9c9c9c;
+    color: #fff;
+  }
