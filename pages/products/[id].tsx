@@ -40,12 +40,29 @@ const ProductDetail: React.FC<Props> = ({ product }) => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
+export const getServerSideProps = async (context: any) => {
   const { id } = context.params!;
   const res = await fetch(`http://localhost:3000/api/products/${id}`);
-  const product = await res.json();
+
+  if (!res.ok) {
+    console.error(`Error fetching product with ID ${id}: ${res.statusText}`);
+    return {
+      notFound: true,
+    };
+  }
+
+  let product;
+  try {
+    product = await res.json();
+  } catch (error) {
+    console.error('Error parsing JSON:', error);
+    return {
+      notFound: true,
+    };
+  }
 
   return { props: { product } };
 };
+
 
 export default ProductDetail;

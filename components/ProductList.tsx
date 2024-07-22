@@ -28,11 +28,30 @@ const ProductList: React.FC = () => {
     }).format(price);
   };
 
+  const defaultProducts: Product[] = [
+    {
+      id: 1,
+      name: 'Default Product 1',
+      description: 'Description for Default Product 1',
+      price: 10000,
+      supplierID: 1,
+    },
+    {
+      id: 2,
+      name: 'Default Product 2',
+      description: 'Description for Default Product 2',
+      price: 20000,
+      supplierID: 2,
+    },
+  ];
+
+  const displayProducts = products.length > 0 ? products : defaultProducts;
+
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Product Catalog</h1>
       <div className={styles.grid}>
-        {products.map((product) => (
+        {displayProducts.map((product) => (
           <Link key={product.id} href={`/products/${product.id}`}>
             <div className={styles.card}>
               <h2>{product.name}</h2>
